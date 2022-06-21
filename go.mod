@@ -1,4 +1,4 @@
-module github.com/mosaicoo/mosaicoo-plugin-sdk-go
+module github.com/mrcavalcanti/mosaicoo-plugin-sdk-go
 
 go 1.17
 

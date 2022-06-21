@@ -67,7 +67,7 @@ If you want to create a new version of the SDK for release, follow these steps:
 
 ```
 gorelease -base v0.122.0 -version v0.123.0
-github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/gtime
+github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/gtime
 ------------------------------------------------------
 Compatible changes:
 - package added
@@ -77,7 +77,7 @@ v0.123.0 is a valid semantic version for this release.
 - Run `git tag <VERSION>` (For example **v0.123.0**)
   - NOTE: We're using Lightweight Tags, so no other options are required
 - Run `git push origin <VERSION>`
-- Verify that the tag was create successfully [here](https://github.com/mosaicoo/mosaicoo-plugin-sdk-go/tags)
+- Verify that the tag was create successfully [here](https://github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/tags)
 - Edit the tag on GitHub and create a release from it.
   - Use the tag name as title.
   - Click on the _Auto-generate release notes_ button.
@@ -94,7 +94,7 @@ v0.123.0 is a valid semantic version for this release.
 ## Compatibility
 ```
 gorelease -base v0.122.0 -version v0.123.0
-github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/gtime
+github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/gtime
 ------------------------------------------------------
 Compatible changes:
 - package added

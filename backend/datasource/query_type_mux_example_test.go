@@ -3,8 +3,8 @@ package datasource_test
 import (
 	"context"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/datasource"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/datasource"
 )
 
 func ExampleQueryTypeMux() {

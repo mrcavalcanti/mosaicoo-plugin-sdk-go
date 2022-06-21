@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
-	httplogger "github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/http_logger"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
+	httplogger "github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/http_logger"
 	"github.com/stretchr/testify/require"
 )
 

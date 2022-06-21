@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
 )
 
 // SendPlainText sends a plain text response.

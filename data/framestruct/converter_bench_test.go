@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data/framestruct"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data/framestruct"
 )
 
 // This is here to avoid compiler optimizations that

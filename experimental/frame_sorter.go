@@ -1,6 +1,6 @@
 package experimental
 
-import "github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
+import "github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data"
 
 // NewFrameSorter returns a new frameSorter.
 func NewFrameSorter(frame *data.Frame, sortField *data.Field) FrameSorter {

@@ -1,7 +1,7 @@
 package datasource
 
 import (
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
 )
 
 // ServeOpts options for serving a data source plugin.

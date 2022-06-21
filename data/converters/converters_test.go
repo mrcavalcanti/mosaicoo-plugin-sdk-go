@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data/converters"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data/converters"
 	"github.com/stretchr/testify/require"
 )
 

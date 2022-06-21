@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data"
 )
 
 func GetDirectoryFrame(p string, details bool) (*data.Frame, error) {

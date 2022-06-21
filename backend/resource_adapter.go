@@ -3,7 +3,7 @@ package backend
 import (
 	"net/http"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/genproto/pluginv2"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/genproto/pluginv2"
 )
 
 // resourceSDKAdapter adapter between low level plugin protocol and SDK interfaces.

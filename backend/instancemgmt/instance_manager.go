@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
 )
 
 // Instance is a marker interface for an instance.

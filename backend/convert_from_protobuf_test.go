@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/mitchellh/reflectwalk"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/genproto/pluginv2"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/genproto/pluginv2"
 	"github.com/stretchr/testify/require"
 )
 

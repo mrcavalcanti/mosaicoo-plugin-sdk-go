@@ -6,7 +6,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/genproto/pluginv2"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/genproto/pluginv2"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/common/expfmt"
 	"github.com/stretchr/testify/require"

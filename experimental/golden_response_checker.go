@@ -13,8 +13,8 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data"
 	"github.com/stretchr/testify/assert"
 )
 

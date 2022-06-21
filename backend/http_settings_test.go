@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/httpclient"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/httpclient"
 	"github.com/stretchr/testify/require"
 )
 

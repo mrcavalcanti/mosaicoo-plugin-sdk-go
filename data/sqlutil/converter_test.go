@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data/sqlutil"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data/sqlutil"
 	"github.com/stretchr/testify/assert"
 )
 

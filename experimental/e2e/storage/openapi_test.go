@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
 	"github.com/stretchr/testify/require"
 )
 

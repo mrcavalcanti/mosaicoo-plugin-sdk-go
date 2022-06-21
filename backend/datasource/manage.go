@@ -1,9 +1,9 @@
 package datasource
 
 import (
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/internal/automanagement"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/internal/standalone"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/internal/automanagement"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/internal/standalone"
 )
 
 // ManageOpts can modify Manage behaviour.

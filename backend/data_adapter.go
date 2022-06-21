@@ -3,7 +3,7 @@ package backend
 import (
 	"context"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/genproto/pluginv2"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/genproto/pluginv2"
 )
 
 // dataSDKAdapter adapter between low level plugin protocol and SDK interfaces.

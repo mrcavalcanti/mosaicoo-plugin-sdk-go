@@ -6,9 +6,9 @@ import (
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	grpc_prometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 	"github.com/hashicorp/go-plugin"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/grpcplugin"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/log"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/genproto/pluginv2"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/grpcplugin"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/log"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/genproto/pluginv2"
 	"github.com/prometheus/client_golang/prometheus"
 	"google.golang.org/grpc"
 )

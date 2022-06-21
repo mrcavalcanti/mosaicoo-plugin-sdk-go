@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
 	"github.com/stretchr/testify/require"
 )
 

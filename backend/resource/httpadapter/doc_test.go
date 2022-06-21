@@ -3,7 +3,7 @@ package httpadapter
 import (
 	"net/http"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
 )
 
 func Example() {

@@ -46,7 +46,7 @@ func Lint() error {
 
 // Drone signs the Drone configuration file
 // This needs to be run everytime the drone.yml file is modified
-// See https://github.com/mosaicoo/deployment_tools/blob/master/docs/infrastructure/drone/signing.md for more info
+// See https://github.com/mrcavalcanti/deployment_tools/blob/master/docs/infrastructure/drone/signing.md for more info
 func Drone() error {
 	if err := sh.RunV("drone", "lint"); err != nil {
 		return err

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/httpclient"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/httpclient"
 )
 
 const dataCustomOptionsKey = "mosaicooData"

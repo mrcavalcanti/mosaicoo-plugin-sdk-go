@@ -3,8 +3,8 @@ package automanagement
 import (
 	"context"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/instancemgmt"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/instancemgmt"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

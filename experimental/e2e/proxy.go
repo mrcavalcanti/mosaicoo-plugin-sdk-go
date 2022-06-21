@@ -8,10 +8,10 @@ import (
 	"strings"
 
 	"github.com/elazarl/goproxy"
-	ca "github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/certificate_authority"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/config"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/fixture"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/utils"
+	ca "github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/certificate_authority"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/config"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/fixture"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/utils"
 )
 
 // ProxyMode is the record or playback mode of the Proxy.

@@ -6,7 +6,7 @@
 // Frames can be encoded using Apache Arrow (https://arrow.apache.org/) for transmission.
 //
 // The corresponding Mosaicoo frontend package the @mosaicoo/data package
-// (https://github.com/mosaicoo/mosaicoo/tree/master/packages/mosaicoo-data).
+// (https://github.com/mrcavalcanti/mosaicoo/tree/master/packages/mosaicoo-data).
 package data
 
 import (

@@ -4,7 +4,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

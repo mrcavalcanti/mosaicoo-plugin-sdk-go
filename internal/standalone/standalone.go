@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/internal"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/internal"
 )
 
 type Args struct {

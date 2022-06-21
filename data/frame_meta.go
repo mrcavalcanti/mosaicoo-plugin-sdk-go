@@ -6,7 +6,7 @@ import (
 )
 
 // FrameMeta matches:
-// https://github.com/mosaicoo/mosaicoo/blob/master/packages/mosaicoo-data/src/types/data.ts#L11
+// https://github.com/mrcavalcanti/mosaicoo/blob/master/packages/mosaicoo-data/src/types/data.ts#L11
 // NOTE -- in javascript this can accept any `[key: string]: any;` however
 // this interface only exposes the values we want to be exposed
 type FrameMeta struct {
@@ -82,7 +82,7 @@ func (f *Frame) AppendNotices(notices ...Notice) {
 
 // QueryStat is used for storing arbitrary statistics metadata related to a query and its result, e.g. total request time, data processing time.
 // The embedded FieldConfig's display name must be set.
-// It corresponds to the QueryResultMetaStat on the frontend (https://github.com/mosaicoo/mosaicoo/blob/master/packages/mosaicoo-data/src/types/data.ts#L53).
+// It corresponds to the QueryResultMetaStat on the frontend (https://github.com/mrcavalcanti/mosaicoo/blob/master/packages/mosaicoo-data/src/types/data.ts#L53).
 type QueryStat struct {
 	FieldConfig
 

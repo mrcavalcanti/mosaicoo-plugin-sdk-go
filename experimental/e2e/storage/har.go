@@ -14,7 +14,7 @@ import (
 
 	"github.com/chromedp/cdproto/har"
 	"github.com/google/uuid"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/utils"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/utils"
 )
 
 // harFiles is a global map of HAR files that are currently being read or written.

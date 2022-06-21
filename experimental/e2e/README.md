@@ -236,16 +236,16 @@ package main
 
 import (
 	// mage:import
-	build "github.com/mosaicoo/mosaicoo-plugin-sdk-go/build"
+	build "github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/build"
 
 	"bytes"
 	"io/ioutil"
 	"net/http"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/config"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/fixture"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/config"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/fixture"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
 )
 
 // Default configures the default target.

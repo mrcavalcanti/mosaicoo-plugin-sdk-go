@@ -97,7 +97,7 @@ Remainder Data:
 
 Notes:
 
-* A Go example of an approximation of this is [here](https://pkg.go.dev/github.com/mosaicoo/mosaicoo-plugin-sdk-go/data#example-Frame-TSDBTimeSeriesSharedTimeIndex).
+* A Go example of an approximation of this is [here](https://pkg.go.dev/github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data#example-Frame-TSDBTimeSeriesSharedTimeIndex).
 
 ## Time Series Multi Format (TimeSeriesMulti)
 
@@ -205,12 +205,12 @@ Remainder Data:
 
 Notes:
 
-* Go example [here](https://pkg.go.dev/github.com/mosaicoo/mosaicoo-plugin-sdk-go/data#example-Frame-TSDBTimeSeriesDifferentTimeIndices).
+* Go example [here](https://pkg.go.dev/github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data#example-Frame-TSDBTimeSeriesDifferentTimeIndices).
 * The many format is the only format that can be converted to from the other formats without data manipulation. Therefore it is a type that can contain the series information of all the other types.
 
 ## Time Series Long Format (TimeSeriesLong) [SQL-Like]
 
-This is a response format common to SQL like systems[^4]. See [Mosaicoo documentation: Multiple dimensions in table format](https://mosaicoo.com/docs/mosaicoo/latest/basics/timeseries-dimensions/#multiple-dimensions-in-table-format) for some more simple (but not complete) examples. It currently exists as a data transformation within some datasources[^5] in the backend that query SQL-like data, see [this Go Example for how that code works](https://pkg.go.dev/github.com/mosaicoo/mosaicoo-plugin-sdk-go/data#example-Frame-TableLikeLongTimeSeries).
+This is a response format common to SQL like systems[^4]. See [Mosaicoo documentation: Multiple dimensions in table format](https://mosaicoo.com/docs/mosaicoo/latest/basics/timeseries-dimensions/#multiple-dimensions-in-table-format) for some more simple (but not complete) examples. It currently exists as a data transformation within some datasources[^5] in the backend that query SQL-like data, see [this Go Example for how that code works](https://pkg.go.dev/github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data#example-Frame-TableLikeLongTimeSeries).
 
 The format is called "Long" because there are more rows to hold the same series than the "wide" format and therefore it grows _longer_.
 
@@ -473,4 +473,4 @@ Additional Properties or Considerations:
 
 [^8]:
 <p>
-     This is used by the SQL datasources to extract time series from the "Long" format (via go sdk/data pkg). In hindsight I sort of wish we had gone with LongToMany instead. See "related" in <a href="https://github.com/mosaicoo/mosaicoo-plugin-sdk-go/issues/315#issuecomment-817839070">this issue comment</a>.
+     This is used by the SQL datasources to extract time series from the "Long" format (via go sdk/data pkg). In hindsight I sort of wish we had gone with LongToMany instead. See "related" in <a href="https://github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/issues/315#issuecomment-817839070">this issue comment</a>.

@@ -1,10 +1,10 @@
 # Mosaicoo Plugin SDK for Go
 
-This SDK enables building [Mosaicoo](https://github.com/mosaicoo/mosaicoo) backend plugins using Go.
+This SDK enables building [Mosaicoo](https://github.com/mrcavalcanti/mosaicoo) backend plugins using Go.
 
 [![License](https://img.shields.io/github/license/mosaicoo/mosaicoo-plugin-sdk-go)](LICENSE)
-[![Go.dev](https://pkg.go.dev/badge/github.com/mosaicoo/mosaicoo-plugin-sdk-go)](https://pkg.go.dev/github.com/mosaicoo/mosaicoo-plugin-sdk-go?tab=doc)
-[![Go Report Card](https://goreportcard.com/badge/github.com/mosaicoo/mosaicoo-plugin-sdk-go)](https://goreportcard.com/report/github.com/mosaicoo/mosaicoo-plugin-sdk-go)
+[![Go.dev](https://pkg.go.dev/badge/github.com/mrcavalcanti/mosaicoo-plugin-sdk-go)](https://pkg.go.dev/github.com/mrcavalcanti/mosaicoo-plugin-sdk-go?tab=doc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/mrcavalcanti/mosaicoo-plugin-sdk-go)](https://goreportcard.com/report/github.com/mrcavalcanti/mosaicoo-plugin-sdk-go)
 [![Circle CI](https://img.shields.io/circleci/build/gh/mosaicoo/mosaicoo-plugin-sdk-go/master)](https://circleci.com/gh/mosaicoo/mosaicoo-plugin-sdk-go?branch=master)
 
 ## Current state
@@ -20,4 +20,4 @@ If you're interested in contributing to this project:
 
 ## License
 
-[Apache 2.0 License](https://github.com/mosaicoo/mosaicoo-plugin-sdk-go/blob/master/LICENSE)
+[Apache 2.0 License](https://github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/blob/master/LICENSE)

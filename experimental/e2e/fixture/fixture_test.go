@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/fixture"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/fixture"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
 	"github.com/stretchr/testify/require"
 )
 

@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/instancemgmt"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/instancemgmt"
 	"github.com/stretchr/testify/require"
 )
 

@@ -3,7 +3,7 @@ package config_test
 import (
 	"testing"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/config"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/config"
 	"github.com/stretchr/testify/require"
 )
 

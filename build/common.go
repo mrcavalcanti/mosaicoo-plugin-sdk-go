@@ -12,12 +12,12 @@ import (
 
 	"github.com/magefile/mage/mg"
 	"github.com/magefile/mage/sh"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e"
-	ca "github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/certificate_authority"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/config"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/fixture"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/internal"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e"
+	ca "github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/certificate_authority"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/config"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/fixture"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/internal"
 )
 
 // Callbacks give you a way to run custom behavior when things happen

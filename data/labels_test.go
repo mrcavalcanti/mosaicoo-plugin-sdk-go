@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data"
 	"github.com/stretchr/testify/require"
 )
 

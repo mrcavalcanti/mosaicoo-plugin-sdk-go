@@ -56,7 +56,7 @@ func (s *ScanRow) NewScannableRow() []interface{} {
 // If no converter is provided for a row that has a type that does not fit into a dataframe, it is skipped.
 func MakeScanRow(colTypes []*sql.ColumnType, colNames []string, converters ...Converter) (*ScanRow, []Converter, error) {
 	// In the future we can probably remove this restriction. But right now we map names to Arrow Field Names.
-	// Arrow Field names must be unique: https://github.com/mosaicoo/mosaicoo-plugin-sdk-go/issues/59
+	// Arrow Field names must be unique: https://github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/issues/59
 	seen := map[string]int{}
 	for i, name := range colNames {
 		if j, ok := seen[name]; ok {

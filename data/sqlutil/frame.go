@@ -3,7 +3,7 @@ package sqlutil
 import (
 	"errors"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data"
 )
 
 // NewFrame creates a new data.Frame with empty fields given the columns and converters

@@ -3,8 +3,8 @@ package datasource
 import (
 	"fmt"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/instancemgmt"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/instancemgmt"
 )
 
 // InstanceFactoryFunc factory method for creating data source instances.

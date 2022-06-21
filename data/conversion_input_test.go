@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
-	conv "github.com/mosaicoo/mosaicoo-plugin-sdk-go/data/converters"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data"
+	conv "github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data/converters"
 )
 
 func ExampleNewFrameInputConverter() {

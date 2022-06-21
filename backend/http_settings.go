@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/httpclient"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/httpclient"
 )
 
 // HTTPSettings is a convenient struct for holding decoded HTTP settings from

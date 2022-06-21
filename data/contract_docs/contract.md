@@ -6,7 +6,7 @@ Status: Draft/Proposal
 
 Define in detail common query response schemas for data returned from data sources. This improves the experience for developers of both features and datasources. This will also improve the experience for users through more reliability and quality - which leads to more development time spent more towards improving experience.
 
-Current Backend [proof of concept code](https://github.com/mosaicoo/mosaicoo-plugin-sdk-go/pull/440).
+Current Backend [proof of concept code](https://github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/pull/440).
 
 ## Kinds and Formats
 
@@ -65,7 +65,7 @@ However, it needs to be possible to add support for this case. For now, the foll
 * Meta-data (Frame and Field)
 * If the type/schema is declared, do we need to support the case where, for whatever reason, the type can be considered multiple Kinds at once?
 * So far ordering is ignored (For example, the order of Value Fields in TimeSeriesWide or the order of Frames in TimeSeriesMulti). Need to decide if ordering as any symantec meaning, if so what it is, and consider it properties of converting between formats
-  * Note: Issue on ordering [https://github.com/mosaicoo/mosaicoo-plugin-sdk-go/issues/366](https://github.com/mosaicoo/mosaicoo-plugin-sdk-go/issues/366) , not sure if it is display issue or not at this time
+  * Note: Issue on ordering [https://github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/issues/366](https://github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/issues/366) , not sure if it is display issue or not at this time
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes

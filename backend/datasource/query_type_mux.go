@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
 )
 
 // QueryTypeMux is a query type multiplexer.

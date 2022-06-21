@@ -16,7 +16,7 @@ var buildInfoJSON string
 // exposed for testing.
 var now = time.Now
 
-// Info See also PluginBuildInfo in https://github.com/mosaicoo/mosaicoo/blob/master/pkg/plugins/models.go
+// Info See also PluginBuildInfo in https://github.com/mrcavalcanti/mosaicoo/blob/master/pkg/plugins/models.go
 type Info struct {
 	Time    int64  `json:"time,omitempty"`
 	Version string `json:"version,omitempty"`
@@ -42,7 +42,7 @@ func (v Info) appendFlags(flags map[string]string) {
 
 	out, err := json.Marshal(v)
 	if err == nil {
-		flags["github.com/mosaicoo/mosaicoo-plugin-sdk-go/build.buildInfoJSON"] = string(out)
+		flags["github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/build.buildInfoJSON"] = string(out)
 	}
 }
 
@@ -108,7 +108,7 @@ func getBuildInfoFromEnvironment() Info {
 }
 
 // GetBuildInfo returns the build information that was compiled into the binary using:
-// -X `github.com/mosaicoo/mosaicoo-plugin-sdk-go/build.buildInfoJSON={...}`
+// -X `github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/build.buildInfoJSON={...}`
 func GetBuildInfo() (Info, error) {
 	v := Info{}
 	if buildInfoJSON == "" {

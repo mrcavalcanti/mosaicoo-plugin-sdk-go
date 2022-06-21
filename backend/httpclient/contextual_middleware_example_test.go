@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/httpclient"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/httpclient"
 )
 
 func ExampleWithContextualMiddleware() {

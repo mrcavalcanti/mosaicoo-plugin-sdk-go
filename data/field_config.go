@@ -10,7 +10,7 @@ import (
 type FieldConfig struct {
 
 	// This struct needs to match the frontend component defined in:
-	// https://github.com/mosaicoo/mosaicoo/blob/master/packages/mosaicoo-data/src/types/dataFrame.ts#L23
+	// https://github.com/mrcavalcanti/mosaicoo/blob/master/packages/mosaicoo-data/src/types/dataFrame.ts#L23
 	// All properties are optional should be omitted from JSON when empty or not set.
 
 	// DisplayName overrides Mosaicoo default naming, should not be used from a data source

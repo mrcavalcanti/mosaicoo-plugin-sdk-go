@@ -7,7 +7,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data"
 )
 
 // FrameConverter defines how to convert the scanned value into a value that can be put into a dataframe (OutputFieldType)
@@ -44,7 +44,7 @@ type StringConverter struct {
 }
 
 // Note: StringConverter is perhaps better understood as []byte. However, currently
-// the Vector type ([][]byte) is not supported. https://github.com/mosaicoo/mosaicoo-plugin-sdk-go/issues/57
+// the Vector type ([][]byte) is not supported. https://github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/issues/57
 
 // StringFieldReplacer is used to replace a *string Field in a Frame. The type
 // returned by the ReplaceFunc must match the type of elements of VectorType.

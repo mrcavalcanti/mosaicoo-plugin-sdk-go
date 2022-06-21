@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/datasource"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/httpclient"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/instancemgmt"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/resource/httpadapter"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/datasource"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/httpclient"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/instancemgmt"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/backend/resource/httpadapter"
 )
 
 type testDataSourceInstanceSettings struct {

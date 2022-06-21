@@ -6,7 +6,7 @@ import (
 
 	"testing"
 
-	ca "github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/certificate_authority"
+	ca "github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/certificate_authority"
 	"github.com/stretchr/testify/require"
 )
 

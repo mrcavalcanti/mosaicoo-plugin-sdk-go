@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/utils"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/experimental/e2e/utils"
 )
 
 type RequestProcessor func(req *http.Request) *http.Request

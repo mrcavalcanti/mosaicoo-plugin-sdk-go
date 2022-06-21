@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
+	"github.com/mrcavalcanti/mosaicoo-plugin-sdk-go/data"
 )
 
 const frameTag = "frame"
