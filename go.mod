@@ -1,4 +1,4 @@
-module github.com/grafana/grafana-plugin-sdk-go
+module github.com/mosaicoo/mosaicoo-plugin-sdk-go
 
 go 1.17
 

@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/grafana/grafana-plugin-sdk-go/data"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
 	"github.com/stretchr/testify/require"
 )
 
@@ -344,7 +344,7 @@ func ExampleFrame_tableLikeLongTimeSeries() {
 
 	// Presently the backend supports converting Long formatted series to "Wide" format
 	// which the frontend understands. Goal is frontend support eventually
-	// (https://github.com/grafana/grafana/issues/22219).
+	// (https://github.com/mosaicoo/mosaicoo/issues/22219).
 
 	type aTable struct {
 		Headers []string

@@ -12,8 +12,8 @@ When prompted, press enter to accept the default values.
 Country Name (2 letter code) [US]:
 State or Province Name (full name) [New York]:
 Locality Name (eg, city) [New York]:
-Organization Name (eg, company) [Grafana Labs]:
-Organizational Unit Name (eg, section) [Grafana Labs]:
-Common Name (e.g. server FQDN or YOUR name) [grafana.com]:
-Email Address [info@grafana.com]:
+Organization Name (eg, company) [Mosaicoo Labs]:
+Organizational Unit Name (eg, section) [Mosaicoo Labs]:
+Common Name (e.g. server FQDN or YOUR name) [mosaicoo.com]:
+Email Address [info@mosaicoo.com]:
 ```

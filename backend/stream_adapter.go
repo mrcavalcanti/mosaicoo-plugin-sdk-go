@@ -6,7 +6,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/grafana/grafana-plugin-sdk-go/genproto/pluginv2"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/genproto/pluginv2"
 )
 
 // streamSDKAdapter adapter between low level plugin protocol and SDK interfaces.

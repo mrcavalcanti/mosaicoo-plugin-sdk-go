@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/data"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
 )
 
 func toConversionError(expected string, v interface{}) error {

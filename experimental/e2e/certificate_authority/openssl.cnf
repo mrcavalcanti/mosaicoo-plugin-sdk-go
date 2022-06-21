@@ -25,15 +25,15 @@ localityName				= Locality Name (eg, city)
 localityName_default		= New York
 
 0.organizationName			= Organization Name (eg, company)
-0.organizationName_default	= Grafana Labs
+0.organizationName_default	= Mosaicoo Labs
 
 organizationalUnitName			= Organizational Unit Name (eg, section)
-organizationalUnitName_default	= Grafana Labs
+organizationalUnitName_default	= Mosaicoo Labs
 
 commonName				= Common Name (e.g. server FQDN or YOUR name)
-commonName_default		= grafana.com
+commonName_default		= mosaicoo.com
 commonName_max			= 64
 
 emailAddress			= Email Address
-emailAddress_default	= info@grafana.com
+emailAddress_default	= info@mosaicoo.com
 emailAddress_max		= 64

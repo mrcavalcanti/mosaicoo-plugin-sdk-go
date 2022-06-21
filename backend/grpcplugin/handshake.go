@@ -11,7 +11,7 @@ const (
 	// MagicCookieKey is the the magic cookie key that will be used for negotiating
 	// between plugin host and client.
 	// Should NEVER be changed.
-	MagicCookieKey = "grafana_plugin_type"
+	MagicCookieKey = "mosaicoo_plugin_type"
 
 	// MagicCookieValue is the the magic cookie value that will be used for negotiating
 	// between plugin host and client.

@@ -16,7 +16,7 @@ import (
 	"golang.org/x/sys/unix"
 )
 
-// ReloadPlugin - kills any running instances and waits for grafana to reload the plugin
+// ReloadPlugin - kills any running instances and waits for mosaicoo to reload the plugin
 func ReloadPlugin() error {
 	exeName, err := getExecutableName(runtime.GOOS, runtime.GOARCH)
 	if err != nil {
@@ -26,7 +26,7 @@ func ReloadPlugin() error {
 	_ = killAllPIDs(exeName)
 	_ = sh.RunV("pkill", "dlv")
 
-	// Wait for grafana to start plugin
+	// Wait for mosaicoo to start plugin
 	for i := 0; i < 20; i++ {
 		time.Sleep(250 * time.Millisecond)
 		pids := findRunningPIDs(exeName)
@@ -40,7 +40,7 @@ func ReloadPlugin() error {
 			break
 		}
 
-		log.Printf("waiting for grafana to start: %s...", exeName)
+		log.Printf("waiting for mosaicoo to start: %s...", exeName)
 	}
 	return nil
 }
@@ -48,7 +48,7 @@ func ReloadPlugin() error {
 // Debugger makes a new debug build, re-launches the plugin and attaches the Delve debugger, in headless mode
 // listening on port 3222.
 //
-// The plugin process is killed after re-building, in order to make Grafana launch the new version. Once the new
+// The plugin process is killed after re-building, in order to make Mosaicoo launch the new version. Once the new
 // version is up, we attach to it with Delve.
 func Debugger() error {
 	// Debug build
@@ -68,7 +68,7 @@ func Debugger() error {
 		}
 	}
 
-	// Wait for grafana to start plugin
+	// Wait for mosaicoo to start plugin
 	pid := -1
 	for i := 0; i < 20; i++ {
 		pids := findRunningPIDs(exeName)
@@ -81,11 +81,11 @@ func Debugger() error {
 			break
 		}
 
-		log.Printf("Waiting for Grafana to start plugin: %q...", exeName)
+		log.Printf("Waiting for Mosaicoo to start plugin: %q...", exeName)
 		time.Sleep(250 * time.Millisecond)
 	}
 	if pid == -1 {
-		return fmt.Errorf("could not find plugin process %q, perhaps Grafana is not running?", exeName)
+		return fmt.Errorf("could not find plugin process %q, perhaps Mosaicoo is not running?", exeName)
 	}
 
 	pidStr := strconv.Itoa(pid)

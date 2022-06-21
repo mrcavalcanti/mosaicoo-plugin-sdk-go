@@ -335,12 +335,12 @@ var Diagnostics_ServiceDesc = grpc.ServiceDesc{
 type StreamClient interface {
 	// SubscribeStream called when a user tries to subscribe to a plugin/datasource
 	// managed channel path – thus plugin can check subscribe permissions and communicate
-	// options with Grafana Core. When the first subscriber joins a channel, RunStream
+	// options with Mosaicoo Core. When the first subscriber joins a channel, RunStream
 	// will be called.
 	SubscribeStream(ctx context.Context, in *SubscribeStreamRequest, opts ...grpc.CallOption) (*SubscribeStreamResponse, error)
-	// RunStream will be initiated by Grafana to consume a stream. RunStream will be
+	// RunStream will be initiated by Mosaicoo to consume a stream. RunStream will be
 	// called once for the first client successfully subscribed to a channel path.
-	// When Grafana detects that there are no longer any subscribers inside a channel,
+	// When Mosaicoo detects that there are no longer any subscribers inside a channel,
 	// the call will be terminated until next active subscriber appears. Call termination
 	// can happen with a delay.
 	RunStream(ctx context.Context, in *RunStreamRequest, opts ...grpc.CallOption) (Stream_RunStreamClient, error)
@@ -414,12 +414,12 @@ func (c *streamClient) PublishStream(ctx context.Context, in *PublishStreamReque
 type StreamServer interface {
 	// SubscribeStream called when a user tries to subscribe to a plugin/datasource
 	// managed channel path – thus plugin can check subscribe permissions and communicate
-	// options with Grafana Core. When the first subscriber joins a channel, RunStream
+	// options with Mosaicoo Core. When the first subscriber joins a channel, RunStream
 	// will be called.
 	SubscribeStream(context.Context, *SubscribeStreamRequest) (*SubscribeStreamResponse, error)
-	// RunStream will be initiated by Grafana to consume a stream. RunStream will be
+	// RunStream will be initiated by Mosaicoo to consume a stream. RunStream will be
 	// called once for the first client successfully subscribed to a channel path.
-	// When Grafana detects that there are no longer any subscribers inside a channel,
+	// When Mosaicoo detects that there are no longer any subscribers inside a channel,
 	// the call will be terminated until next active subscriber appears. Call termination
 	// can happen with a delay.
 	RunStream(*RunStreamRequest, Stream_RunStreamServer) error

@@ -10,13 +10,13 @@ import (
 type FieldConfig struct {
 
 	// This struct needs to match the frontend component defined in:
-	// https://github.com/grafana/grafana/blob/master/packages/grafana-data/src/types/dataFrame.ts#L23
+	// https://github.com/mosaicoo/mosaicoo/blob/master/packages/mosaicoo-data/src/types/dataFrame.ts#L23
 	// All properties are optional should be omitted from JSON when empty or not set.
 
-	// DisplayName overrides Grafana default naming, should not be used from a data source
+	// DisplayName overrides Mosaicoo default naming, should not be used from a data source
 	DisplayName string `json:"displayName,omitempty"`
 
-	// DisplayNameFromDS overrides Grafana default naming in a better way that allows users to override it easily.
+	// DisplayNameFromDS overrides Mosaicoo default naming in a better way that allows users to override it easily.
 	DisplayNameFromDS string `json:"displayNameFromDS,omitempty"`
 
 	// Path is an explicit path to the field in the datasource. When the frame meta includes a path,
@@ -43,7 +43,7 @@ type FieldConfig struct {
 
 	// Interval indicates the expected regular step between values in the series.
 	// When an interval exists, consumers can identify "missing" values when the expected value is not present.
-	// The grafana timeseries visualization will render disconnected values when missing values are found it the time field.
+	// The mosaicoo timeseries visualization will render disconnected values when missing values are found it the time field.
 	// The interval uses the same units as the values.  For time.Time, this is defined in milliseconds.
 	Interval float64 `json:"interval,omitempty"`
 

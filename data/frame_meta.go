@@ -6,7 +6,7 @@ import (
 )
 
 // FrameMeta matches:
-// https://github.com/grafana/grafana/blob/master/packages/grafana-data/src/types/data.ts#L11
+// https://github.com/mosaicoo/mosaicoo/blob/master/packages/mosaicoo-data/src/types/data.ts#L11
 // NOTE -- in javascript this can accept any `[key: string]: any;` however
 // this interface only exposes the values we want to be exposed
 type FrameMeta struct {
@@ -26,10 +26,10 @@ type FrameMeta struct {
 	Stats []QueryStat `json:"stats,omitempty"`
 
 	// Notices provide additional information about the data in the Frame that
-	// Grafana can display to the user in the user interface.
+	// Mosaicoo can display to the user in the user interface.
 	Notices []Notice `json:"notices,omitempty"`
 
-	// Channel is the path to a stream in grafana live that has real-time updates for this data.
+	// Channel is the path to a stream in mosaicoo live that has real-time updates for this data.
 	Channel string `json:"channel,omitempty"`
 
 	// PreferredVisualization is currently used to show results in Explore only in preferred visualisation option.
@@ -40,7 +40,7 @@ type FrameMeta struct {
 	ExecutedQueryString string `json:"executedQueryString,omitempty"`
 }
 
-// Should be kept in sync with grafana/packages/grafana-data/src/types/data.ts#PreferredVisualisationType
+// Should be kept in sync with mosaicoo/packages/mosaicoo-data/src/types/data.ts#PreferredVisualisationType
 const (
 	// VisTypeGraph indicates the response should be visualized using a graph.
 	VisTypeGraph VisType = "graph"
@@ -82,14 +82,14 @@ func (f *Frame) AppendNotices(notices ...Notice) {
 
 // QueryStat is used for storing arbitrary statistics metadata related to a query and its result, e.g. total request time, data processing time.
 // The embedded FieldConfig's display name must be set.
-// It corresponds to the QueryResultMetaStat on the frontend (https://github.com/grafana/grafana/blob/master/packages/grafana-data/src/types/data.ts#L53).
+// It corresponds to the QueryResultMetaStat on the frontend (https://github.com/mosaicoo/mosaicoo/blob/master/packages/mosaicoo-data/src/types/data.ts#L53).
 type QueryStat struct {
 	FieldConfig
 
 	Value float64 `json:"value"`
 }
 
-// Notice provides a structure for presenting notifications in Grafana's user interface.
+// Notice provides a structure for presenting notifications in Mosaicoo's user interface.
 type Notice struct {
 	// Severity is the severity level of the notice: info, warning, or error.
 	Severity NoticeSeverity `json:"severity,omitempty"`
@@ -98,11 +98,11 @@ type Notice struct {
 	Text string `json:"text"`
 
 	// Link is an optional link for display in the user interface and can be an
-	// absolute URL or a path relative to Grafana's root url.
+	// absolute URL or a path relative to Mosaicoo's root url.
 	Link string `json:"link,omitempty"`
 
 	// Inspect is an optional suggestion for which tab to display in the panel inspector
-	// in Grafana's User interface. Can be meta, error, data, or stats.
+	// in Mosaicoo's User interface. Can be meta, error, data, or stats.
 	Inspect InspectType `json:"inspect,omitempty"`
 }
 
@@ -168,19 +168,19 @@ func (n *NoticeSeverity) UnmarshalJSON(b []byte) error {
 type InspectType int
 
 const (
-	// InspectTypeNone is no suggestion for a tab of the panel editor in Grafana's user interface.
+	// InspectTypeNone is no suggestion for a tab of the panel editor in Mosaicoo's user interface.
 	InspectTypeNone InspectType = iota
 
-	// InspectTypeMeta suggests the "meta" tab of the panel editor in Grafana's user interface.
+	// InspectTypeMeta suggests the "meta" tab of the panel editor in Mosaicoo's user interface.
 	InspectTypeMeta
 
-	// InspectTypeError suggests the "error" tab of the panel editor in Grafana's user interface.
+	// InspectTypeError suggests the "error" tab of the panel editor in Mosaicoo's user interface.
 	InspectTypeError
 
-	// InspectTypeData suggests the "data" tab of the panel editor in Grafana's user interface.
+	// InspectTypeData suggests the "data" tab of the panel editor in Mosaicoo's user interface.
 	InspectTypeData
 
-	// InspectTypeStats suggests the "stats" tab of the panel editor in Grafana's user interface.
+	// InspectTypeStats suggests the "stats" tab of the panel editor in Mosaicoo's user interface.
 	InspectTypeStats
 )
 

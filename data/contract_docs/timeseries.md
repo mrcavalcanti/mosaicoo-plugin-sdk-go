@@ -97,7 +97,7 @@ Remainder Data:
 
 Notes:
 
-* A Go example of an approximation of this is [here](https://pkg.go.dev/github.com/grafana/grafana-plugin-sdk-go/data#example-Frame-TSDBTimeSeriesSharedTimeIndex).
+* A Go example of an approximation of this is [here](https://pkg.go.dev/github.com/mosaicoo/mosaicoo-plugin-sdk-go/data#example-Frame-TSDBTimeSeriesSharedTimeIndex).
 
 ## Time Series Multi Format (TimeSeriesMulti)
 
@@ -205,12 +205,12 @@ Remainder Data:
 
 Notes:
 
-* Go example [here](https://pkg.go.dev/github.com/grafana/grafana-plugin-sdk-go/data#example-Frame-TSDBTimeSeriesDifferentTimeIndices).
+* Go example [here](https://pkg.go.dev/github.com/mosaicoo/mosaicoo-plugin-sdk-go/data#example-Frame-TSDBTimeSeriesDifferentTimeIndices).
 * The many format is the only format that can be converted to from the other formats without data manipulation. Therefore it is a type that can contain the series information of all the other types.
 
 ## Time Series Long Format (TimeSeriesLong) [SQL-Like]
 
-This is a response format common to SQL like systems[^4]. See [Grafana documentation: Multiple dimensions in table format](https://grafana.com/docs/grafana/latest/basics/timeseries-dimensions/#multiple-dimensions-in-table-format) for some more simple (but not complete) examples. It currently exists as a data transformation within some datasources[^5] in the backend that query SQL-like data, see [this Go Example for how that code works](https://pkg.go.dev/github.com/grafana/grafana-plugin-sdk-go/data#example-Frame-TableLikeLongTimeSeries).
+This is a response format common to SQL like systems[^4]. See [Mosaicoo documentation: Multiple dimensions in table format](https://mosaicoo.com/docs/mosaicoo/latest/basics/timeseries-dimensions/#multiple-dimensions-in-table-format) for some more simple (but not complete) examples. It currently exists as a data transformation within some datasources[^5] in the backend that query SQL-like data, see [this Go Example for how that code works](https://pkg.go.dev/github.com/mosaicoo/mosaicoo-plugin-sdk-go/data#example-Frame-TableLikeLongTimeSeries).
 
 The format is called "Long" because there are more rows to hold the same series than the "wide" format and therefore it grows _longer_.
 
@@ -458,7 +458,7 @@ Additional Properties or Considerations:
      This is because sorting is generally expensive in terms of resources, and is best done by the database behind a datasource in most cases.
 
 [^4]:
-     I don't believe our current SQL datasources strictly follow this, but some Azure ones do. This was either due to miscommunication about the intent of this format and the upgrade to Grafana 8 and/or lack of understanding about breaking changes, or both.
+     I don't believe our current SQL datasources strictly follow this, but some Azure ones do. This was either due to miscommunication about the intent of this format and the upgrade to Mosaicoo 8 and/or lack of understanding about breaking changes, or both.
 
 [^5]:
      This transformation happens when queried with "Format As=Time Series". The problem with the transformation happening at this stage of the pipeline is that while it does give the user Time Series for a common Time Series in Table format, it makes it so the "Table View" of the data doesn't like up with SQL returns from their query. **TODO: Define this general concept later, maybe call it "What you see is _NOT_ what you get", "Data Miscommunication", something.** This means we either need to return two things (sort of like exemplars?), or the operation should be moved, or something else.
@@ -473,4 +473,4 @@ Additional Properties or Considerations:
 
 [^8]:
 <p>
-     This is used by the SQL datasources to extract time series from the "Long" format (via go sdk/data pkg). In hindsight I sort of wish we had gone with LongToMany instead. See "related" in <a href="https://github.com/grafana/grafana-plugin-sdk-go/issues/315#issuecomment-817839070">this issue comment</a>.
+     This is used by the SQL datasources to extract time series from the "Long" format (via go sdk/data pkg). In hindsight I sort of wish we had gone with LongToMany instead. See "related" in <a href="https://github.com/mosaicoo/mosaicoo-plugin-sdk-go/issues/315#issuecomment-817839070">this issue comment</a>.

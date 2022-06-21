@@ -7,11 +7,11 @@ import (
 	"io/ioutil"
 )
 
-//go:embed grafana-e2e-ca.pem
+//go:embed mosaicoo-e2e-ca.pem
 // CACertificate Certificate Authority certificate used by the proxy.
 var CACertificate []byte
 
-//go:embed grafana-e2e-ca.key.pem
+//go:embed mosaicoo-e2e-ca.key.pem
 // CAKey Certificate Authority private key used by the proxy.
 var CAKey []byte
 

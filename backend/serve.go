@@ -3,12 +3,12 @@ package backend
 import (
 	"net"
 
-	"github.com/grafana/grafana-plugin-sdk-go/backend/grpcplugin"
-	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana-plugin-sdk-go/genproto/pluginv2"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	grpc_prometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 	"github.com/hashicorp/go-plugin"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/grpcplugin"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/log"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/genproto/pluginv2"
 	"github.com/prometheus/client_golang/prometheus"
 	"google.golang.org/grpc"
 )
@@ -40,7 +40,7 @@ type ServeOpts struct {
 	QueryDataHandler QueryDataHandler
 
 	// StreamHandler handler for streaming queries.
-	// This is EXPERIMENTAL and is a subject to change till Grafana 8.
+	// This is EXPERIMENTAL and is a subject to change till Mosaicoo 8.
 	StreamHandler StreamHandler
 
 	// GRPCSettings settings for gPRC.

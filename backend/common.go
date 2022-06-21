@@ -4,13 +4,13 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/httpclient"
 )
 
-const dataCustomOptionsKey = "grafanaData"
-const secureDataCustomOptionsKey = "grafanaSecureData"
+const dataCustomOptionsKey = "mosaicooData"
+const secureDataCustomOptionsKey = "mosaicooSecureData"
 
-// User represents a Grafana user.
+// User represents a Mosaicoo user.
 type User struct {
 	Login string
 	Name  string
@@ -20,14 +20,14 @@ type User struct {
 
 // AppInstanceSettings represents settings for an app instance.
 //
-// In Grafana an app instance is an app plugin of certain
-// type that have been configured and enabled in a Grafana organization.
+// In Mosaicoo an app instance is an app plugin of certain
+// type that have been configured and enabled in a Mosaicoo organization.
 type AppInstanceSettings struct {
 	// JSONData repeats the properties at this level of the object (excluding DataSourceConfig), and also includes any
 	// custom properties associated with the plugin config instance.
 	JSONData json.RawMessage
 
-	// DecryptedSecureJSONData contains key,value pairs where the encrypted configuration plugin instance in Grafana
+	// DecryptedSecureJSONData contains key,value pairs where the encrypted configuration plugin instance in Mosaicoo
 	// server have been decrypted before passing them to the plugin.
 	DecryptedSecureJSONData map[string]string
 
@@ -50,13 +50,13 @@ func (s *AppInstanceSettings) HTTPClientOptions() (httpclient.Options, error) {
 
 // DataSourceInstanceSettings represents settings for a data source instance.
 //
-// In Grafana a data source instance is a data source plugin of certain
-// type that have been configured and created in a Grafana organization.
+// In Mosaicoo a data source instance is a data source plugin of certain
+// type that have been configured and created in a Mosaicoo organization.
 type DataSourceInstanceSettings struct {
-	// ID is the Grafana assigned numeric identifier of the the data source instance.
+	// ID is the Mosaicoo assigned numeric identifier of the the data source instance.
 	ID int64
 
-	// UID is the Grafana assigned string identifier of the the data source instance.
+	// UID is the Mosaicoo assigned string identifier of the the data source instance.
 	UID string
 
 	// Type is the unique identifier of the plugin that the request is for.
@@ -69,7 +69,7 @@ type DataSourceInstanceSettings struct {
 	// URL is the configured URL of a data source instance (e.g. the URL of an API endpoint).
 	URL string
 
-	// User is a configured user for a data source instance. This is not a Grafana user, rather an arbitrary string.
+	// User is a configured user for a data source instance. This is not a Mosaicoo user, rather an arbitrary string.
 	User string
 
 	// Database is the configured database for a data source instance. (e.g. the default Database a SQL data source would connect to).
@@ -82,11 +82,11 @@ type DataSourceInstanceSettings struct {
 	// authentication to connect to whatever API it fetches data from).
 	BasicAuthUser string
 
-	// JSONData contains the raw DataSourceConfig as JSON as stored by Grafana server. It repeats the properties in
+	// JSONData contains the raw DataSourceConfig as JSON as stored by Mosaicoo server. It repeats the properties in
 	// this object and includes custom properties.
 	JSONData json.RawMessage
 
-	// DecryptedSecureJSONData contains key,value pairs where the encrypted configuration in Grafana server have been
+	// DecryptedSecureJSONData contains key,value pairs where the encrypted configuration in Mosaicoo server have been
 	// decrypted before passing them to the plugin.
 	DecryptedSecureJSONData map[string]string
 
@@ -122,24 +122,24 @@ func (s *DataSourceInstanceSettings) HTTPClientOptions() (httpclient.Options, er
 }
 
 // PluginContext holds contextual information about a plugin request, such as
-// Grafana organization, user and plugin instance settings.
+// Mosaicoo organization, user and plugin instance settings.
 type PluginContext struct {
-	// OrgID is The Grafana organization identifier the request originating from.
+	// OrgID is The Mosaicoo organization identifier the request originating from.
 	OrgID int64
 
 	// PluginID is the unique identifier of the plugin that the request is for.
 	PluginID string
 
-	// User is the Grafana user making the request.
+	// User is the Mosaicoo user making the request.
 	//
-	// Will not be provided if Grafana backend initiated the request,
-	// for example when request is coming from Grafana Alerting.
+	// Will not be provided if Mosaicoo backend initiated the request,
+	// for example when request is coming from Mosaicoo Alerting.
 	User *User
 
 	// AppInstanceSettings is the configured app instance settings.
 	//
-	// In Grafana an app instance is an app plugin of certain
-	// type that have been configured and enabled in a Grafana organization.
+	// In Mosaicoo an app instance is an app plugin of certain
+	// type that have been configured and enabled in a Mosaicoo organization.
 	//
 	// Will only be set if request targeting an app instance.
 	AppInstanceSettings *AppInstanceSettings
@@ -147,8 +147,8 @@ type PluginContext struct {
 	// DataSourceConfig is the configured data source instance
 	// settings.
 	//
-	// In Grafana a data source instance is a data source plugin of certain
-	// type that have been configured and created in a Grafana organization.
+	// In Mosaicoo a data source instance is a data source plugin of certain
+	// type that have been configured and created in a Mosaicoo organization.
 	//
 	// Will only be set if request targeting a data source instance.
 	DataSourceInstanceSettings *DataSourceInstanceSettings

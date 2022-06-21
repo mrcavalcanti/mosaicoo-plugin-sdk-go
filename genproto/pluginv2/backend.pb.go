@@ -433,23 +433,23 @@ type PluginContext struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// The Grafana organization id the request originating from.
+	// The Mosaicoo organization id the request originating from.
 	OrgId int64 `protobuf:"varint,1,opt,name=orgId,proto3" json:"orgId,omitempty"`
 	// The unique identifier of the plugin the request  originating from.
 	PluginId string `protobuf:"bytes,2,opt,name=pluginId,proto3" json:"pluginId,omitempty"`
-	// The Grafana user the request originating from.
+	// The Mosaicoo user the request originating from.
 	//
-	// Will not be provided if Grafana backend initiated the request.
+	// Will not be provided if Mosaicoo backend initiated the request.
 	User *User `protobuf:"bytes,3,opt,name=user,proto3" json:"user,omitempty"`
 	// App plugin instance settings is the configured app instance settings.
-	// In Grafana an app instance is an enabled app plugin in a
-	// Grafana organization.
+	// In Mosaicoo an app instance is an enabled app plugin in a
+	// Mosaicoo organization.
 	//
 	// Will only be set if request targeting an app instance.
 	AppInstanceSettings *AppInstanceSettings `protobuf:"bytes,4,opt,name=appInstanceSettings,proto3" json:"appInstanceSettings,omitempty"`
 	// Data source instance settings is the configured data source instance
-	// settings. In Grafana a data source instance is a created data source
-	// in a Grafana organization.
+	// settings. In Mosaicoo a data source instance is a created data source
+	// in a Mosaicoo organization.
 	//
 	// Will only be set if request targeting a data source instance.
 	DataSourceInstanceSettings *DataSourceInstanceSettings `protobuf:"bytes,5,opt,name=dataSourceInstanceSettings,proto3" json:"dataSourceInstanceSettings,omitempty"`
@@ -1453,7 +1453,7 @@ type PublishStreamResponse struct {
 	Status PublishStreamResponse_Status `protobuf:"varint,1,opt,name=status,proto3,enum=pluginv2.PublishStreamResponse_Status" json:"status,omitempty"`
 	// JSON-encoded data to publish into a channel. This can be
 	// unmodified data from a PublishRequest or any modified data.
-	// If empty data returned here then Grafana won't publish data
+	// If empty data returned here then Mosaicoo won't publish data
 	// to a channel itself but will return a successful result to a
 	// client (supposing plugin published data to a channel itself).
 	Data []byte `protobuf:"bytes,2,opt,name=data,proto3" json:"data,omitempty"`

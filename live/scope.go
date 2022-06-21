@@ -1,8 +1,8 @@
 package live
 
 const (
-	// ScopeGrafana contains builtin real-time features of Grafana Core.
-	ScopeGrafana = "grafana"
+	// ScopeMosaicoo contains builtin real-time features of Mosaicoo Core.
+	ScopeMosaicoo = "mosaicoo"
 	// ScopePlugin passes control to a plugin.
 	ScopePlugin = "plugin"
 	// ScopeDatasource passes control to a datasource plugin.

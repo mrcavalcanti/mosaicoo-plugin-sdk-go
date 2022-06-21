@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/grafana/grafana-plugin-sdk-go/data"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
 )
 
 // FrameFromRows returns a new Frame populated with the data from rows. The field types

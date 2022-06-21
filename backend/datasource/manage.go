@@ -1,9 +1,9 @@
 package datasource
 
 import (
-	"github.com/grafana/grafana-plugin-sdk-go/backend"
-	"github.com/grafana/grafana-plugin-sdk-go/internal/automanagement"
-	"github.com/grafana/grafana-plugin-sdk-go/internal/standalone"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/internal/automanagement"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/internal/standalone"
 )
 
 // ManageOpts can modify Manage behaviour.

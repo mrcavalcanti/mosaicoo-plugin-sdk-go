@@ -12,11 +12,11 @@ var ErrInvalidChannelID = errors.New("invalid channel ID")
 // Channel is the channel ID split by parts.
 type Channel struct {
 	// Scope is one of available channel scopes:
-	// like ScopeGrafana, ScopePlugin, ScopeDatasource, ScopeStream.
+	// like ScopeMosaicoo, ScopePlugin, ScopeDatasource, ScopeStream.
 	Scope string `json:"scope,omitempty"`
 
 	// Namespace meaning depends on the scope.
-	// * when ScopeGrafana, namespace is a "feature"
+	// * when ScopeMosaicoo, namespace is a "feature"
 	// * when ScopePlugin, namespace is the plugin name
 	// * when ScopeDatasource, namespace is the datasource uid
 	// * when ScopeStream, namespace is the stream ID.

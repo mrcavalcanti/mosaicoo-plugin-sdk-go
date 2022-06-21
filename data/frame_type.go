@@ -17,7 +17,7 @@ const (
 	// field[1..n]:
 	//  * distinct labels may be attached to each field
 	//  * numeric & boolean fields can be drawn as lines on a graph
-	// See https://grafana.com/docs/grafana/latest/developers/plugins/data-frames/#wide-format
+	// See https://mosaicoo.com/docs/mosaicoo/latest/developers/plugins/data-frames/#wide-format
 	FrameTypeTimeSeriesWide = "timeseries-wide"
 
 	// FrameTypeTimeSeriesLong uses string fields to define dimensions.  I has at least two fields:
@@ -28,7 +28,7 @@ const (
 	// field[1..n]:
 	//  * string fields define series dimensions
 	//  * non-string fields define the series progression
-	// See https://grafana.com/docs/grafana/latest/developers/plugins/data-frames/#long-format
+	// See https://mosaicoo.com/docs/mosaicoo/latest/developers/plugins/data-frames/#long-format
 	FrameTypeTimeSeriesLong = "timeseries-long"
 
 	// FrameTypeTimeSeriesMany is the same as "Wide" with exactly one numeric value field

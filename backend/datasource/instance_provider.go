@@ -3,8 +3,8 @@ package datasource
 import (
 	"fmt"
 
-	"github.com/grafana/grafana-plugin-sdk-go/backend"
-	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/instancemgmt"
 )
 
 // InstanceFactoryFunc factory method for creating data source instances.
@@ -23,7 +23,7 @@ func NewInstanceManager(fn InstanceFactoryFunc) instancemgmt.InstanceManager {
 //
 // The instance provider is responsible for providing cache keys for data source instances,
 // creating new instances when needed and invalidating cached instances when they have been
-// updated in Grafana.
+// updated in Mosaicoo.
 // Cache key is based on the numerical data source identifier.
 // If fn is nil, NewInstanceProvider panics.
 func NewInstanceProvider(fn InstanceFactoryFunc) instancemgmt.InstanceProvider {

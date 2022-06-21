@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend/httpclient"
 )
 
 func ExampleNewProvider() {

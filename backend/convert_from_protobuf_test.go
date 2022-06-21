@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/genproto/pluginv2"
 	"github.com/mitchellh/reflectwalk"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/genproto/pluginv2"
 	"github.com/stretchr/testify/require"
 )
 
@@ -141,9 +141,9 @@ var protoDataSourceInstanceSettings = &pluginv2.DataSourceInstanceSettings{
 	Id:                      2,
 	Uid:                     "uid 2",
 	Name:                    "bestData",
-	Url:                     "http://grafana.com",
+	Url:                     "http://mosaicoo.com",
 	User:                    "aUser",
-	Database:                "grafana",
+	Database:                "mosaicoo",
 	BasicAuthEnabled:        true,
 	BasicAuthUser:           "anotherUser",
 	JsonData:                []byte(`{ "foo": "gpp"`),

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/grafana/grafana-plugin-sdk-go/backend"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/backend"
 )
 
 func DoActionCommand(ctx context.Context, req *backend.CallResourceRequest, handler ActionHandler, sender backend.CallResourceResponseSender) error {

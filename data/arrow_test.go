@@ -13,7 +13,7 @@ import (
 
 	"github.com/apache/arrow/go/arrow/ipc"
 	"github.com/google/go-cmp/cmp"
-	"github.com/grafana/grafana-plugin-sdk-go/data"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
 	"github.com/stretchr/testify/require"
 )
 
@@ -24,7 +24,7 @@ const minEcma6Int = -maxEcma6Int
 
 func goldenDF() *data.Frame {
 	nullableStringValuesFieldConfig := (&data.FieldConfig{
-		DisplayName: "Grafana ❤️ (Previous should be heart emoji) 🦥 (Previous should be sloth emoji)",
+		DisplayName: "Mosaicoo ❤️ (Previous should be heart emoji) 🦥 (Previous should be sloth emoji)",
 		Links: []data.DataLink{
 			{
 				Title:       "Donate - The Sloth Conservation Foundation",
@@ -45,7 +45,7 @@ func goldenDF() *data.Frame {
 			"Go Max",
 		}).SetConfig(&data.FieldConfig{}),
 		data.NewField("nullable_string_values", data.Labels{"aLabelKey": "aLabelValue", "bLabelKey": "bLabelValue"}, []*string{
-			stringPtr("Grafana"),
+			stringPtr("Mosaicoo"),
 			stringPtr("❤️"),
 			nil,
 			stringPtr("🦥"),

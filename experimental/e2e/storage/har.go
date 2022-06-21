@@ -14,7 +14,7 @@ import (
 
 	"github.com/chromedp/cdproto/har"
 	"github.com/google/uuid"
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/utils"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/utils"
 )
 
 // harFiles is a global map of HAR files that are currently being read or written.
@@ -60,13 +60,13 @@ func (s *HAR) Init() {
 	s.har.Log = &har.Log{
 		Version: "1.2",
 		Creator: &har.Creator{
-			Name:    "grafana-plugin-sdk-go",
+			Name:    "mosaicoo-plugin-sdk-go",
 			Version: "experimental",
 		},
 		Entries: make([]*har.Entry, 0),
 		Pages: []*har.Page{{
 			StartedDateTime: s.currentTime().Format(time.RFC3339),
-			Title:           "Grafana E2E",
+			Title:           "Mosaicoo E2E",
 			ID:              s.newUUID(),
 			PageTimings:     &har.PageTimings{},
 		}},

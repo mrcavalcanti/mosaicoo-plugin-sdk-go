@@ -23,7 +23,7 @@ type Field struct {
 	// identify a Field within a Frame.
 	Labels Labels `json:"labels,omitempty"`
 
-	// Config is optional display configuration information for Grafana
+	// Config is optional display configuration information for Mosaicoo
 	Config *FieldConfig `json:"config,omitempty"`
 
 	// vector is the unexported values. it is unexported so we can change the underlying structure without

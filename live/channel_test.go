@@ -25,12 +25,12 @@ func TestParseChannel(t *testing.T) {
 }
 
 func TestParseChannel_ChannelTooLong(t *testing.T) {
-	prefix := "grafana/dashboard/"
+	prefix := "mosaicoo/dashboard/"
 	b := make([]byte, 0, maxChannelLength+1)
 	for i := 0; i < maxChannelLength+1-len(prefix); i++ {
 		b = append(b, 'a')
 	}
-	chID := fmt.Sprintf("grafana/dashboard/%s", string(b))
+	chID := fmt.Sprintf("mosaicoo/dashboard/%s", string(b))
 	_, err := ParseChannel(chID)
 	require.ErrorIs(t, err, ErrInvalidChannelID)
 }
@@ -78,22 +78,22 @@ func TestParseChannel_IsValid(t *testing.T) {
 		},
 		{
 			name:    "invalid_no_path",
-			id:      "grafana/bbb",
+			id:      "mosaicoo/bbb",
 			isValid: false,
 		},
 		{
 			name:    "invalid_only_scope",
-			id:      "grafana",
+			id:      "mosaicoo",
 			isValid: false,
 		},
 		{
 			name:    "path_with_additional_symbols",
-			id:      "grafana/test/path/dash-and-equal=1.1.1.1",
+			id:      "mosaicoo/test/path/dash-and-equal=1.1.1.1",
 			isValid: true,
 		},
 		{
 			name:    "scope_namespace_with_additional_symbols",
-			id:      "grafana=/test=/path/dash-and-equal",
+			id:      "mosaicoo=/test=/path/dash-and-equal",
 			isValid: false,
 		},
 	}

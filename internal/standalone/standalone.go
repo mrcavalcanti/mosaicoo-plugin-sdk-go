@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/internal"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/internal"
 )
 
 type Args struct {
@@ -133,7 +133,7 @@ func getFreePort() (int, error) {
 	return l.Addr().(*net.TCPAddr).Port, nil
 }
 
-// Killing the currently registered plugin will cause grafana to restart it
+// Killing the currently registered plugin will cause mosaicoo to restart it
 // this time pointing to our new host
 func findAndKillCurrentPlugin(dir string) {
 	defer func() {

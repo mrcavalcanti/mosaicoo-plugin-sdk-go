@@ -3,8 +3,8 @@ package grpcplugin
 import (
 	"context"
 
-	"github.com/grafana/grafana-plugin-sdk-go/genproto/pluginv2"
 	"github.com/hashicorp/go-plugin"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/genproto/pluginv2"
 	"google.golang.org/grpc"
 )
 

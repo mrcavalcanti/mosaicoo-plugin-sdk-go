@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/utils"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/utils"
 )
 
 // Entry represents a http.Request and http.Response pair.

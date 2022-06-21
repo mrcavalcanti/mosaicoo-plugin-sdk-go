@@ -44,20 +44,20 @@ The goal of the proxy is to provide a way to record and replay HTTP interactions
 mage e2e:append
 ```
 
-4. Point Grafana at the proxy by exporting the `HTTP_PROXY` and `HTTPS_PROXY` environment variables:
+4. Point Mosaicoo at the proxy by exporting the `HTTP_PROXY` and `HTTPS_PROXY` environment variables:
 
 ```
 export HTTP_PROXY=127.0.0.1:9999
 export HTTPS_PROXY=127.0.0.1:9999
 ```
 
-5. Start Grafana
+5. Start Mosaicoo
 
 **Note:** Only queries with **absolute time ranges** should be used with the proxy. Relative time ranges are not supported in the default matcher.
 
 ## CA Certificate Setup
 
-This step is needed so that the proxy can intercept HTTPS traffic. By default, the bundled [certificate](certificate_authority/grafana-e2e-ca.pem) and [private key](certificate_authority/grafana-e2e-ca.key.pem) are used. For more information about using a custom CA key pair, see the [ca_keypair](#ca_keypair) config section.
+This step is needed so that the proxy can intercept HTTPS traffic. By default, the bundled [certificate](certificate_authority/mosaicoo-e2e-ca.pem) and [private key](certificate_authority/mosaicoo-e2e-ca.key.pem) are used. For more information about using a custom CA key pair, see the [ca_keypair](#ca_keypair) config section.
 
 ### Debian & Ubuntu
 
@@ -78,13 +78,13 @@ sudo update-ca-certificates --fresh
 1. Create a temporary copy of the CA certificate:
 
 ```
-mage e2e:certificate > /tmp/grafana-e2e.crt
+mage e2e:certificate > /tmp/mosaicoo-e2e.crt
 ```
 
 2. Add CA certificate:
 
 ```
-sudo security add-trusted-cert -d -p ssl -p basic -k /Library/Keychains/System.keychain /tmp/grafana-e2e.crt
+sudo security add-trusted-cert -d -p ssl -p basic -k /Library/Keychains/System.keychain /tmp/mosaicoo-e2e.crt
 ```
 
 ## Config File
@@ -162,7 +162,7 @@ In certain situations it can be useful to replay responses from multiple data so
 
 ### ca_keypair
 
-An object used define paths to a custom CA certificate and private key in PEM format. By default, the bundled [certificate](certificate_authority/grafana-e2e-ca.pem) and [private key](certificate_authority/grafana-e2e-ca.key.pem) are used. For more information about generating a custom self-signed CA certificate, see the [Certificate Authority Key Pair Generation](certificate_authority/README.md) documentation.
+An object used define paths to a custom CA certificate and private key in PEM format. By default, the bundled [certificate](certificate_authority/mosaicoo-e2e-ca.pem) and [private key](certificate_authority/mosaicoo-e2e-ca.key.pem) are used. For more information about generating a custom self-signed CA certificate, see the [Certificate Authority Key Pair Generation](certificate_authority/README.md) documentation.
 
 Default:
 ```json
@@ -236,16 +236,16 @@ package main
 
 import (
 	// mage:import
-	build "github.com/grafana/grafana-plugin-sdk-go/build"
+	build "github.com/mosaicoo/mosaicoo-plugin-sdk-go/build"
 
 	"bytes"
 	"io/ioutil"
 	"net/http"
 
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e"
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/config"
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/fixture"
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/storage"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/config"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/fixture"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
 )
 
 // Default configures the default target.

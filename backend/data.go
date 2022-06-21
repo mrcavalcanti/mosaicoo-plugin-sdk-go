@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/data"
 	jsoniter "github.com/json-iterator/go"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
 )
 
 // QueryDataHandler handles data queries.
@@ -18,7 +18,7 @@ type QueryDataHandler interface {
 	//
 	// The Frames' RefID property, when it is an empty string, will be automatically set to
 	// the RefID in QueryDataResponse.Responses map. This is done before the QueryDataResponse is
-	// sent to Grafana. Therefore one does not need to be set that property on frames when using this method.
+	// sent to Mosaicoo. Therefore one does not need to be set that property on frames when using this method.
 	QueryData(ctx context.Context, req *QueryDataRequest) (*QueryDataResponse, error)
 }
 

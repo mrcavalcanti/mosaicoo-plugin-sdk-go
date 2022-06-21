@@ -9,9 +9,9 @@ import (
 	"path"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/fixture"
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/storage"
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/utils"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/fixture"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/utils"
 )
 
 const (

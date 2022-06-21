@@ -5,32 +5,32 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/grafana/grafana-plugin-sdk-go/genproto/pluginv2"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/genproto/pluginv2"
 
-	"github.com/grafana/grafana-plugin-sdk-go/data"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/data"
 )
 
 // StreamHandler handles streams.
-// This is EXPERIMENTAL and is a subject to change till Grafana 8.
+// This is EXPERIMENTAL and is a subject to change till Mosaicoo 8.
 type StreamHandler interface {
 	// SubscribeStream called when a user tries to subscribe to a plugin/datasource
 	// managed channel path – thus plugin can check subscribe permissions and communicate
-	// options with Grafana Core. As soon as first subscriber joins channel RunStream
+	// options with Mosaicoo Core. As soon as first subscriber joins channel RunStream
 	// will be called.
 	SubscribeStream(context.Context, *SubscribeStreamRequest) (*SubscribeStreamResponse, error)
 	// PublishStream called when a user tries to publish to a plugin/datasource
 	// managed channel path. Here plugin can check publish permissions and
 	// modify publication data if required.
 	PublishStream(context.Context, *PublishStreamRequest) (*PublishStreamResponse, error)
-	// RunStream will be initiated by Grafana to consume a stream. RunStream will be
+	// RunStream will be initiated by Mosaicoo to consume a stream. RunStream will be
 	// called once for the first client successfully subscribed to a channel path.
-	// When Grafana detects that there are no longer any subscribers inside a channel,
+	// When Mosaicoo detects that there are no longer any subscribers inside a channel,
 	// the call will be terminated until next active subscriber appears. Call termination
 	// can happen with a delay.
 	RunStream(context.Context, *RunStreamRequest, *StreamSender) error
 }
 
-// SubscribeStreamRequest is EXPERIMENTAL and is a subject to change till Grafana 8.
+// SubscribeStreamRequest is EXPERIMENTAL and is a subject to change till Mosaicoo 8.
 type SubscribeStreamRequest struct {
 	PluginContext PluginContext
 	Path          string
@@ -49,7 +49,7 @@ const (
 	SubscribeStreamStatusPermissionDenied SubscribeStreamStatus = 2
 )
 
-// SubscribeStreamResponse is EXPERIMENTAL and is a subject to change till Grafana 8.
+// SubscribeStreamResponse is EXPERIMENTAL and is a subject to change till Mosaicoo 8.
 type SubscribeStreamResponse struct {
 	Status      SubscribeStreamStatus
 	InitialData *InitialData
@@ -86,7 +86,7 @@ func NewInitialData(data json.RawMessage) (*InitialData, error) {
 	}, nil
 }
 
-// PublishStreamRequest is EXPERIMENTAL and is a subject to change till Grafana 8.
+// PublishStreamRequest is EXPERIMENTAL and is a subject to change till Mosaicoo 8.
 type PublishStreamRequest struct {
 	PluginContext PluginContext
 	Path          string
@@ -105,31 +105,31 @@ const (
 	PublishStreamStatusPermissionDenied PublishStreamStatus = 2
 )
 
-// PublishStreamResponse is EXPERIMENTAL and is a subject to change till Grafana 8.
+// PublishStreamResponse is EXPERIMENTAL and is a subject to change till Mosaicoo 8.
 type PublishStreamResponse struct {
 	Status PublishStreamStatus
 	Data   json.RawMessage
 }
 
-// RunStreamRequest is EXPERIMENTAL and is a subject to change till Grafana 8.
+// RunStreamRequest is EXPERIMENTAL and is a subject to change till Mosaicoo 8.
 type RunStreamRequest struct {
 	PluginContext PluginContext
 	Path          string
 	Data          json.RawMessage
 }
 
-// StreamPacket is EXPERIMENTAL and is a subject to change till Grafana 8.
+// StreamPacket is EXPERIMENTAL and is a subject to change till Mosaicoo 8.
 type StreamPacket struct {
 	Data json.RawMessage
 }
 
-// StreamPacketSender is EXPERIMENTAL and is a subject to change till Grafana 8.
+// StreamPacketSender is EXPERIMENTAL and is a subject to change till Mosaicoo 8.
 type StreamPacketSender interface {
 	Send(*StreamPacket) error
 }
 
 // StreamSender allows sending data to a stream.
-// StreamSender is EXPERIMENTAL and is a subject to change till Grafana 8.
+// StreamSender is EXPERIMENTAL and is a subject to change till Mosaicoo 8.
 type StreamSender struct {
 	packetSender StreamPacketSender
 }

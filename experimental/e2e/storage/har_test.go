@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/storage"
+	"github.com/mosaicoo/mosaicoo-plugin-sdk-go/experimental/e2e/storage"
 	"github.com/stretchr/testify/require"
 )
 
@@ -65,7 +65,7 @@ func TestHARStorage(t *testing.T) {
 			s := storage.NewHARStorage("testdata/example.har")
 			req := s.Entries()[0].Request
 			res := s.Entries()[0].Response
-			require.Equal(t, "https://grafana.com/api/plugins", req.URL.String())
+			require.Equal(t, "https://mosaicoo.com/api/plugins", req.URL.String())
 			require.Len(t, req.Header, 13)
 			require.Equal(t, http.MethodGet, req.Method)
 			require.Equal(t, http.StatusOK, res.StatusCode)
@@ -74,7 +74,7 @@ func TestHARStorage(t *testing.T) {
 
 			req = s.Entries()[1].Request
 			res = s.Entries()[1].Response
-			require.Equal(t, "https://grafana.com/favicon.ico", req.URL.String())
+			require.Equal(t, "https://mosaicoo.com/favicon.ico", req.URL.String())
 			require.Len(t, req.Header, 6)
 			require.Equal(t, http.MethodGet, req.Method)
 			require.Equal(t, 0, res.StatusCode)
@@ -96,7 +96,7 @@ func TestHARStorage(t *testing.T) {
 			ok := s.Delete(s.Entries()[1].Request)
 			require.True(t, ok)
 			require.Equal(t, 1, len(s.Entries()))
-			require.Equal(t, "https://grafana.com/api/plugins", s.Entries()[0].Request.URL.String())
+			require.Equal(t, "https://mosaicoo.com/api/plugins", s.Entries()[0].Request.URL.String())
 		})
 	})
 

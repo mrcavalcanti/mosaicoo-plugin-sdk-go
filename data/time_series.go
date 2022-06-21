@@ -13,7 +13,7 @@ import (
 // Deprecated: this type will be replaced with FrameType and FrameType#IsTimeSeries()
 type TimeSeriesType int
 
-// TODO: Create and link to Grafana documentation on Long vs Wide
+// TODO: Create and link to Mosaicoo documentation on Long vs Wide
 const (
 	// TimeSeriesTypeNot means this Frame is not a valid time series. This means it lacks at least
 	// one of a time Field and another (value) Field.
